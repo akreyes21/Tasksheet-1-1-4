@@ -1,0 +1,25 @@
+def calculate_grade(score):
+    if score >= 90 and score <= 100:
+        return "A"
+    elif score >= 80 and score <= 89:
+        return "B"
+    elif score >= 70 and score <= 79:
+        return "C"
+    elif score >= 60 and score <= 69:
+        return "D"
+    else:
+        return "F"
+
+def main():
+    try:
+        score = float(input("Enter the student's score: "))
+        if score < 0 or score > 100:
+            print("Invalid score! Score must be between 0 and 100.")
+        else:
+            grade = calculate_grade(score)
+            print("Grade:", grade)
+    except ValueError:
+        print("Invalid input! Please enter a numerical score.")
+
+if __name__ == "__main__":
+    main()
